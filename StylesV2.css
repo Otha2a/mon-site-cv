@@ -300,39 +300,26 @@ html {
 /* ====== RESPONSIVE MOBILE ====== */
 @media screen and (max-width: 768px) {
 
-    body {
-        padding: 10px;
-    }
-
+    /* On annule le menu fixe à gauche */
     .side-menu {
         position: static;
-        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
-    .side-menu a {
-        font-size: 14px;
-    }
-
+    /* On enlève la marge qui décale tout */
     .cv-container {
         margin-left: 0;
-        max-width: 100%;
+        width: 100%;
     }
 
-    section {
-        padding: 0 10px;
-    }
+    /* On réduit les titres */
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
 
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
+    /* Texte plus lisible */
     p, li {
         font-size: 15px;
         line-height: 1.6;
