@@ -130,6 +130,11 @@ html {
     color: #64ffda;
 }
 
+.side-menu a.active {
+  color: #64ffda;
+  transform: translateX(10px); /* décale vers la droite */
+}
+
 
 
 .section-title {
