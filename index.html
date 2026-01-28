@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Ton Prénom</title>
+    <title>Mon site personnel</title>
     <link rel="stylesheet" href="StylesV2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -16,6 +16,9 @@
         <i class="fab fa-instagram"></i>
     </a>
 </div>
+
+
+
 
 <body>
 
@@ -35,10 +38,10 @@
     </div>
 
     <div class="cv-container">
-        <!-- En-tête avec photo à droite -->
+
         <header class="cv-header">
             <div class="info-personnelle">
-                <section class="About" id="info-personnelle">
+                <section  id="info-personnelle" class="About reveal">
                     <h2 class="section-title"></h2>
                     <div class="about-content">
                         <p> Je suis étudiant à l'Institut Supérieur d'Électronique de Paris et je suis à la recherche d’une alternance à partir de septembre 2026, orientée vers les métiers du développement informatique. </p>
@@ -56,7 +59,7 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
         </header>
 
         <!-- Section Formation -->
-        <section class="Formation" id="formation">
+        <section id="formation" class="Formation reveal">
             <h2>🎓 Formation</h2>
 
             <div class="formation-item">
@@ -99,7 +102,7 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
 
 
         <!-- Section expérience / Projets -->
-         <section class="Experience/Projets" id="Experience/Projets">
+         <section id="Experience/Projets" class="Experience/Projets reveal">
             <h2>💼 Experience/Projets</h2>
             <div class="experience-item">
                 <div class="experience-left">
@@ -159,7 +162,7 @@ dans la douche.</h3>
             </div>
         </section>
         
-        <section class="Interets" id="interets">
+        <section id="interets" class="Interets reveal">
             <h2 class="section-title">Centres d'interet</h2>
             <div class="interets-item">
                 <div>
@@ -167,7 +170,7 @@ dans la douche.</h3>
                 </div>
             </div>  
         </section>
-        <section class="Contact" id="contact">
+        <section id="contact" class="Contact reveal">
             <h2 class="section-title">Me contacter</h2>
 
             <p class="contact-text">
@@ -193,6 +196,45 @@ dans la douche.</h3>
     </div>
 
 
+    <script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  reveals.forEach(element => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+    const visiblePoint = 100;
+
+    if (elementTop < windowHeight - visiblePoint) {
+      element.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+<button id="scrollTopBtn" title="Retour en haut">↑</button>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
 
 
 </body>
