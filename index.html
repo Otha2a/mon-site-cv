@@ -15,6 +15,9 @@
     <a href="https://www.instagram.com/othmanechattou/" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
     </a>
+    <a href="https://github.com/Otha2a" target="_blank" aria-label="github">
+        <i class="fab fa-github"></i>
+    </a>
 </div>
 
 
@@ -38,7 +41,6 @@
     </div>
 
     <div class="cv-container">
-
         <header class="cv-header">
             <div class="info-personnelle">
                 <section  id="info-personnelle" class="About reveal">
@@ -110,12 +112,7 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
                 </div>
                 <div class="experience-right">
                     <p>
-      - Application desktop développée en Java et JavaFX permettant de gérer un portefeuille 
-      d’investissement (actions et cryptomonnaies). 
-                    </p>
-                    <p>
-                        - Création de portefeuilles, achat/vente d’actifs, calcul des profits/pertes 
-      et visualisation de graphiques interactifs.
+      Mon équipe et moi avons créé une application, développée en Java et JavaFX, qui permet de gérer un portefeuille d’investissement comprenant des actions et des cryptomonnaies avec leurs prix actuels à l'aide d'API. Elle offre la possibilité de créer des portefeuilles, d’effectuer des opérations d’achat et de vente d’actifs, de calculer les profits et pertes, ainsi que de visualiser des graphiques interactifs pour un meilleur suivi des performances.
                     </p>
                 </div>
             </div>
@@ -124,8 +121,8 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
                     <h3>Octobre 2025 – Hackathon national (Battle Dev inter-écoles)</h3>
                 </div>
                 <div class="experience-right">
-                    <p>- Participation au challenge national organisé par Thales et Garage ISEP.</p>
-                    <p>- Résolution d’algorithmes en temps limité, avec divers langages de programmation au choix.</p>
+                    <p>J’ai participé au hackathon national Battle Dev inter-écoles, un challenge organisé par Thales et Garage ISEP. Cet événement consistait à résoudre des problèmes algorithmiques en temps limité, en utilisant le langage de programmation de son choix, mettant à l’épreuve la rapidité d’analyse et les compétences en programmation.</p>
+
                 </div>
             </div>  
             <div class="experience-item">
@@ -133,9 +130,7 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
                     <h3>Septembre 2025 – Garage ISEP – Coder Lab</h3>
                 </div>
                 <div class="experience-right">
-                    <p>- Initiation et utilisation d’outils de développement : Intellij, Visual Studio Code, Git…</p>
-                    <p>- Pratique de plusieurs langages : Java, Python, JavaScript…</p>
-                    <p>- Manipulation et automatisation via l’interpréteur de commande Bash.</p>
+                    <p>Au sein du Coder Lab, j’ai été initié à l’utilisation d’outils de développement tels qu’IntelliJ, Visual Studio Code et Git. J’y ai également pratiqué plusieurs langages de programmation comme Java, Python et JavaScript, tout en développant des compétences en manipulation et en automatisation à travers l’utilisation de l’interpréteur de commandes Bash.</p>
                 </div>
             </div>
             <div class="experience-item">
@@ -143,10 +138,7 @@ Je suis motivé à rejoindre une entreprise où je pourrai apprendre, progresser
                     <h3>Septembre 2025 – Hackathon IA et Mixité</h3>
                 </div>
                 <div class="experience-right">
-                    <p>- Travail en équipe pendant 48h pour imaginer des solutions innovantes autour de l’inclusion, en 
-partenariat avec InterElles, Lenovo, Orange et l’ISEP.</p>
-                    <p>- Conception et développement d’un site web dédié à l’orientation des jeunes femmes vers les 
-métiers de l’ingénierie.</p>
+                    <p>Lors du Hackathon IA et Mixité, j’ai travaillé en équipe pendant 48 heures afin d’imaginer des solutions innovantes autour de l’inclusion, en partenariat avec InterElles, Lenovo, Orange et l’ISEP. Dans ce cadre, nous avons conçu et développé un site web dédié à l’orientation des jeunes femmes vers les métiers de l’ingénierie.</p>
                 </div>
             </div>
             <div class="experience-item">
@@ -155,9 +147,7 @@ métiers de l’ingénierie.</p>
 dans la douche.</h3>
                 </div>
                 <div class="experience-right">
-                    <p>- Conception d’un système innovant basé sur un échangeur thermique.</p>
-                    <p>- Modélisation du dispositif et simulation des performances.</p>
-                    <p>- Réalisation d’une maquette fonctionnelle et présentation orale devant un jury.</p>
+                    <p>J’ai créé un système permettant de récupérer l’énergie des eaux évacuées dans une douche, reposant sur la conception d’un dispositif innovant basé sur un échangeur thermique. Ce projet a inclus la création du système, la simulation de ses performances, ainsi que la réalisation d’une maquette fonctionnelle, conclue par une présentation orale devant un jury.</p>
                 </div>
             </div>
         </section>
@@ -232,6 +222,19 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
+  });
+});
+</script>
+
+<script>
+const menuLinks = document.querySelectorAll(".side-menu a");
+
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // retire active partout
+    menuLinks.forEach(l => l.classList.remove("active"));
+    // ajoute active au lien cliqué
+    link.classList.add("active");
   });
 });
 </script>
